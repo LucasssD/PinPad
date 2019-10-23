@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PinPadView" customModule="PinPad" customModuleProvider="target">
+            <connections>
+                <outlet property="leftAccesory" destination="RA6-iN-iYa" id="fa2-Ps-GuO"/>
+                <outlet property="rightAccesory" destination="DkV-W0-6SP" id="0dd-kc-oPE"/>
+                <outletCollection property="pins" destination="scG-bQ-iJC" collectionClass="NSMutableArray" id="mqD-ZL-j56"/>
+                <outletCollection property="pins" destination="UtA-C9-9V8" collectionClass="NSMutableArray" id="o1j-h8-QeF"/>
+                <outletCollection property="pins" destination="CBz-io-Tky" collectionClass="NSMutableArray" id="XDq-w7-9gO"/>
+                <outletCollection property="pins" destination="yzx-X1-dgi" collectionClass="NSMutableArray" id="YyE-hx-RIf"/>
+                <outletCollection property="pins" destination="2tZ-rG-Gkq" collectionClass="NSMutableArray" id="6JY-mk-rm3"/>
+                <outletCollection property="pins" destination="v9K-41-Uxk" collectionClass="NSMutableArray" id="wbh-V3-toe"/>
+                <outletCollection property="numberBtns" destination="wPp-kH-uv2" collectionClass="NSMutableArray" id="yb0-Te-Bly"/>
+                <outletCollection property="numberBtns" destination="686-DJ-jbl" collectionClass="NSMutableArray" id="qKo-Vn-spM"/>
+                <outletCollection property="numberBtns" destination="hEi-Pi-ubI" collectionClass="NSMutableArray" id="mjz-yy-dDJ"/>
+                <outletCollection property="numberBtns" destination="Bti-0h-p0t" collectionClass="NSMutableArray" id="DSS-Vz-SMR"/>
+                <outletCollection property="numberBtns" destination="E8A-uF-0eu" collectionClass="NSMutableArray" id="xVj-VG-4iD"/>
+                <outletCollection property="numberBtns" destination="KJP-qf-Umg" collectionClass="NSMutableArray" id="irb-qR-RPM"/>
+                <outletCollection property="numberBtns" destination="Gp0-Sn-QUd" collectionClass="NSMutableArray" id="Zw2-v6-QNH"/>
+                <outletCollection property="numberBtns" destination="fpu-1n-1Bt" collectionClass="NSMutableArray" id="4AD-z0-gEV"/>
+                <outletCollection property="numberBtns" destination="TEH-Li-6Du" collectionClass="NSMutableArray" id="gPf-ic-3Te"/>
+                <outletCollection property="numberBtns" destination="JKs-sv-4Pr" collectionClass="NSMutableArray" id="a6m-x6-eof"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="510" height="782"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oP6-oY-ICj">
+                    <rect key="frame" x="70.5" y="44" width="369" height="738"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CFl-8y-aMu">
+                            <rect key="frame" x="0.0" y="0.0" width="369" height="116.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLT-76-PGX">
+                                    <rect key="frame" x="0.0" y="20" width="46" height="76"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ri8-aD-Sdg">
+                                    <rect key="frame" x="46" y="20" width="46.5" height="76"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scG-bQ-iJC" customClass="PinView" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="30" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="16" id="4uv-Cc-meU"/>
+                                                <constraint firstAttribute="width" secondItem="scG-bQ-iJC" secondAttribute="height" id="hwX-bV-AML"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="scG-bQ-iJC" firstAttribute="centerX" secondItem="ri8-aD-Sdg" secondAttribute="centerX" id="ENY-Fo-UmC"/>
+                                        <constraint firstItem="scG-bQ-iJC" firstAttribute="centerY" secondItem="ri8-aD-Sdg" secondAttribute="centerY" id="ycj-lx-iJK"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOU-b1-xLI">
+                                    <rect key="frame" x="92.5" y="20" width="46" height="76"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UtA-C9-9V8" customClass="PinView" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="30" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="UtA-C9-9V8" secondAttribute="height" id="pFh-g3-nVE"/>
+                                                <constraint firstAttribute="width" constant="16" id="qZT-Gx-9X0"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="UtA-C9-9V8" firstAttribute="centerY" secondItem="AOU-b1-xLI" secondAttribute="centerY" id="BkM-k1-svo"/>
+                                        <constraint firstItem="UtA-C9-9V8" firstAttribute="centerX" secondItem="AOU-b1-xLI" secondAttribute="centerX" id="NJM-QE-vPe"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xeh-Wp-VdF">
+                                    <rect key="frame" x="138.5" y="20" width="46" height="76"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBz-io-Tky" customClass="PinView" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="30" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="16" id="Qt0-zx-UvM"/>
+                                                <constraint firstAttribute="width" secondItem="CBz-io-Tky" secondAttribute="height" id="krF-HB-sIP"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="CBz-io-Tky" firstAttribute="centerY" secondItem="Xeh-Wp-VdF" secondAttribute="centerY" id="MwL-LK-njE"/>
+                                        <constraint firstItem="CBz-io-Tky" firstAttribute="centerX" secondItem="Xeh-Wp-VdF" secondAttribute="centerX" id="ccB-91-BlM"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9T-gy-wVg">
+                                    <rect key="frame" x="184.5" y="20" width="46" height="76"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzx-X1-dgi" customClass="PinView" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="30" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="yzx-X1-dgi" secondAttribute="height" id="3iK-b0-7VV"/>
+                                                <constraint firstAttribute="width" constant="16" id="GxE-rh-gdU"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yzx-X1-dgi" firstAttribute="centerX" secondItem="X9T-gy-wVg" secondAttribute="centerX" id="A43-C1-h27"/>
+                                        <constraint firstItem="yzx-X1-dgi" firstAttribute="centerY" secondItem="X9T-gy-wVg" secondAttribute="centerY" id="BM0-19-V0a"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azq-YM-94T">
+                                    <rect key="frame" x="230.5" y="20" width="46.5" height="76"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tZ-rG-Gkq" customClass="PinView" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="30" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="2tZ-rG-Gkq" secondAttribute="height" id="iyS-Mr-k6F"/>
+                                                <constraint firstAttribute="width" constant="16" id="yM3-fG-Rx6"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2tZ-rG-Gkq" firstAttribute="centerX" secondItem="Azq-YM-94T" secondAttribute="centerX" id="EeQ-Ha-ENS"/>
+                                        <constraint firstItem="2tZ-rG-Gkq" firstAttribute="centerY" secondItem="Azq-YM-94T" secondAttribute="centerY" id="z49-R9-QfA"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLO-TM-446">
+                                    <rect key="frame" x="277" y="20" width="46" height="76"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9K-41-Uxk" customClass="PinView" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="30" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="16" id="MBL-mi-mh8"/>
+                                                <constraint firstAttribute="width" secondItem="v9K-41-Uxk" secondAttribute="height" id="g6T-vd-Odd"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="v9K-41-Uxk" firstAttribute="centerY" secondItem="ZLO-TM-446" secondAttribute="centerY" id="B4s-4F-4x7"/>
+                                        <constraint firstItem="v9K-41-Uxk" firstAttribute="centerX" secondItem="ZLO-TM-446" secondAttribute="centerX" id="cV7-kj-ohJ"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFf-QP-0Bi">
+                                    <rect key="frame" x="323" y="20" width="46" height="76"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dbp-Ky-5oe">
+                            <rect key="frame" x="0.0" y="124.5" width="369" height="116"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BmX-Wi-Ikp">
+                                    <rect key="frame" x="0.0" y="0.0" width="117.5" height="116"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPp-kH-uv2" customClass="NumberButton" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="0.5" y="0.0" width="116.5" height="116"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="wPp-kH-uv2" secondAttribute="height" id="hcY-L2-JT7"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <state key="normal" title="1">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="numberValue">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberBtnAcion:" destination="-1" eventType="touchUpInside" id="dsp-DA-xFd"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wPp-kH-uv2" firstAttribute="width" secondItem="BmX-Wi-Ikp" secondAttribute="width" priority="750" id="0HT-Pa-LXp"/>
+                                        <constraint firstItem="wPp-kH-uv2" firstAttribute="height" secondItem="BmX-Wi-Ikp" secondAttribute="height" priority="750" id="1ch-M2-6Xn"/>
+                                        <constraint firstItem="wPp-kH-uv2" firstAttribute="centerX" secondItem="BmX-Wi-Ikp" secondAttribute="centerX" id="Pef-l0-nHe"/>
+                                        <constraint firstItem="wPp-kH-uv2" firstAttribute="centerY" secondItem="BmX-Wi-Ikp" secondAttribute="centerY" id="nRR-DL-uXM"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kku-iE-9XP">
+                                    <rect key="frame" x="125.5" y="0.0" width="118" height="116"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="686-DJ-jbl" customClass="NumberButton" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="1" y="0.0" width="116" height="116"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="686-DJ-jbl" secondAttribute="height" id="BfW-yW-2WC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <state key="normal" title="2">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="numberValue">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberBtnAcion:" destination="-1" eventType="touchUpInside" id="AkE-5S-KXq"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="686-DJ-jbl" firstAttribute="height" secondItem="Kku-iE-9XP" secondAttribute="height" priority="750" id="LEG-YR-M4e"/>
+                                        <constraint firstItem="686-DJ-jbl" firstAttribute="centerX" secondItem="Kku-iE-9XP" secondAttribute="centerX" id="iAi-4Z-zSr"/>
+                                        <constraint firstItem="686-DJ-jbl" firstAttribute="centerY" secondItem="Kku-iE-9XP" secondAttribute="centerY" id="kPF-Zo-QZD"/>
+                                        <constraint firstItem="686-DJ-jbl" firstAttribute="width" secondItem="Kku-iE-9XP" secondAttribute="width" priority="750" id="qj2-Vy-W9a"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1j-Fs-ccs">
+                                    <rect key="frame" x="251.5" y="0.0" width="117.5" height="116"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEi-Pi-ubI" customClass="NumberButton" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="0.5" y="0.0" width="116.5" height="116"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="hEi-Pi-ubI" secondAttribute="height" id="TzS-0a-ykl"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <state key="normal" title="3">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="numberValue">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberBtnAcion:" destination="-1" eventType="touchUpInside" id="CVV-50-bM8"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hEi-Pi-ubI" firstAttribute="height" secondItem="v1j-Fs-ccs" secondAttribute="height" priority="750" id="H7r-H5-dOa"/>
+                                        <constraint firstItem="hEi-Pi-ubI" firstAttribute="width" secondItem="v1j-Fs-ccs" secondAttribute="width" priority="750" id="MiI-vr-uoV"/>
+                                        <constraint firstItem="hEi-Pi-ubI" firstAttribute="centerX" secondItem="v1j-Fs-ccs" secondAttribute="centerX" id="pV6-21-AAE"/>
+                                        <constraint firstItem="hEi-Pi-ubI" firstAttribute="centerY" secondItem="v1j-Fs-ccs" secondAttribute="centerY" id="x5O-Q4-dON"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NHi-zS-Hc0">
+                            <rect key="frame" x="0.0" y="248.5" width="369" height="116.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ay7-Gs-8N0">
+                                    <rect key="frame" x="0.0" y="0.0" width="117.5" height="116.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bti-0h-p0t" customClass="NumberButton" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="0.5" y="0.0" width="116.5" height="116.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Bti-0h-p0t" secondAttribute="height" id="Te7-Dx-K1h"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <state key="normal" title="4">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="numberValue">
+                                                    <integer key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberBtnAcion:" destination="-1" eventType="touchUpInside" id="AE3-44-Qn8"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Bti-0h-p0t" firstAttribute="width" secondItem="Ay7-Gs-8N0" secondAttribute="width" priority="750" id="Kas-Hw-lg6"/>
+                                        <constraint firstItem="Bti-0h-p0t" firstAttribute="centerY" secondItem="Ay7-Gs-8N0" secondAttribute="centerY" id="mLa-bj-bWY"/>
+                                        <constraint firstItem="Bti-0h-p0t" firstAttribute="centerX" secondItem="Ay7-Gs-8N0" secondAttribute="centerX" id="sdO-RX-iJo"/>
+                                        <constraint firstItem="Bti-0h-p0t" firstAttribute="height" secondItem="Ay7-Gs-8N0" secondAttribute="height" priority="750" id="uHw-tV-616"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0dz-Aa-mIf">
+                                    <rect key="frame" x="125.5" y="0.0" width="118" height="116.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8A-uF-0eu" customClass="NumberButton" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="1" y="0.0" width="116" height="116.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="E8A-uF-0eu" secondAttribute="height" id="eWL-KC-27c"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <state key="normal" title="5">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="numberValue">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberBtnAcion:" destination="-1" eventType="touchUpInside" id="6Yt-pV-hXb"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="E8A-uF-0eu" firstAttribute="centerY" secondItem="0dz-Aa-mIf" secondAttribute="centerY" id="E7s-u7-vHB"/>
+                                        <constraint firstItem="E8A-uF-0eu" firstAttribute="height" secondItem="0dz-Aa-mIf" secondAttribute="height" priority="750" id="hzZ-Pz-MfE"/>
+                                        <constraint firstItem="E8A-uF-0eu" firstAttribute="width" secondItem="0dz-Aa-mIf" secondAttribute="width" priority="750" id="iMH-dh-Ugj"/>
+                                        <constraint firstItem="E8A-uF-0eu" firstAttribute="centerX" secondItem="0dz-Aa-mIf" secondAttribute="centerX" id="nYK-xu-EzI"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0b-U7-aGO">
+                                    <rect key="frame" x="251.5" y="0.0" width="117.5" height="116.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJP-qf-Umg" customClass="NumberButton" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="0.5" y="0.0" width="116.5" height="116.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="KJP-qf-Umg" secondAttribute="height" id="gaN-Kl-cKV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <state key="normal" title="6">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="numberValue">
+                                                    <integer key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberBtnAcion:" destination="-1" eventType="touchUpInside" id="zyx-7Q-jkV"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KJP-qf-Umg" firstAttribute="height" secondItem="B0b-U7-aGO" secondAttribute="height" priority="750" id="AA1-o0-gwo"/>
+                                        <constraint firstItem="KJP-qf-Umg" firstAttribute="centerX" secondItem="B0b-U7-aGO" secondAttribute="centerX" id="FcH-qU-roD"/>
+                                        <constraint firstItem="KJP-qf-Umg" firstAttribute="width" secondItem="B0b-U7-aGO" secondAttribute="width" priority="750" id="kJV-Dv-FXf"/>
+                                        <constraint firstItem="KJP-qf-Umg" firstAttribute="centerY" secondItem="B0b-U7-aGO" secondAttribute="centerY" id="y4k-nr-3qE"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pHU-f7-KFG">
+                            <rect key="frame" x="0.0" y="373" width="369" height="116.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6XW-gn-BWg">
+                                    <rect key="frame" x="0.0" y="0.0" width="117.5" height="116.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gp0-Sn-QUd" customClass="NumberButton" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="0.5" y="0.0" width="116.5" height="116.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Gp0-Sn-QUd" secondAttribute="height" id="rdZ-to-gUn"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <state key="normal" title="7">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="numberValue">
+                                                    <integer key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberBtnAcion:" destination="-1" eventType="touchUpInside" id="bcu-wN-qBw"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Gp0-Sn-QUd" firstAttribute="centerY" secondItem="6XW-gn-BWg" secondAttribute="centerY" id="3sM-SQ-HYl"/>
+                                        <constraint firstItem="Gp0-Sn-QUd" firstAttribute="height" secondItem="6XW-gn-BWg" secondAttribute="height" priority="750" id="Exw-qm-WPr"/>
+                                        <constraint firstItem="Gp0-Sn-QUd" firstAttribute="centerX" secondItem="6XW-gn-BWg" secondAttribute="centerX" id="Q3V-s9-N2q"/>
+                                        <constraint firstItem="Gp0-Sn-QUd" firstAttribute="width" secondItem="6XW-gn-BWg" secondAttribute="width" priority="750" id="qah-5B-yEz"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTx-Gi-D4x">
+                                    <rect key="frame" x="125.5" y="0.0" width="118" height="116.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpu-1n-1Bt" customClass="NumberButton" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="1" y="0.0" width="116" height="116.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="fpu-1n-1Bt" secondAttribute="height" id="CNf-7U-8CZ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <state key="normal" title="8">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="numberValue">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberBtnAcion:" destination="-1" eventType="touchUpInside" id="VgE-s2-cGy"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fpu-1n-1Bt" firstAttribute="width" secondItem="PTx-Gi-D4x" secondAttribute="width" priority="750" id="BnG-Jr-Hhp"/>
+                                        <constraint firstItem="fpu-1n-1Bt" firstAttribute="height" secondItem="PTx-Gi-D4x" secondAttribute="height" priority="750" id="SsA-bx-xUo"/>
+                                        <constraint firstItem="fpu-1n-1Bt" firstAttribute="centerX" secondItem="PTx-Gi-D4x" secondAttribute="centerX" id="VS1-tx-OCk"/>
+                                        <constraint firstItem="fpu-1n-1Bt" firstAttribute="centerY" secondItem="PTx-Gi-D4x" secondAttribute="centerY" id="bnw-06-uM6"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XZV-ja-xCb">
+                                    <rect key="frame" x="251.5" y="0.0" width="117.5" height="116.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEH-Li-6Du" customClass="NumberButton" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="0.5" y="0.0" width="116.5" height="116.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="TEH-Li-6Du" secondAttribute="height" id="qOJ-dr-B41"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <state key="normal" title="9">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="numberValue">
+                                                    <integer key="value" value="9"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberBtnAcion:" destination="-1" eventType="touchUpInside" id="0yk-DU-6UH"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="TEH-Li-6Du" firstAttribute="centerY" secondItem="XZV-ja-xCb" secondAttribute="centerY" id="0Uk-4p-Th2"/>
+                                        <constraint firstItem="TEH-Li-6Du" firstAttribute="height" secondItem="XZV-ja-xCb" secondAttribute="height" priority="750" id="MRJ-A4-YEX"/>
+                                        <constraint firstItem="TEH-Li-6Du" firstAttribute="centerX" secondItem="XZV-ja-xCb" secondAttribute="centerX" id="T1F-y6-car"/>
+                                        <constraint firstItem="TEH-Li-6Du" firstAttribute="width" secondItem="XZV-ja-xCb" secondAttribute="width" priority="750" id="fC0-fx-t6m"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="r6G-SB-voH">
+                            <rect key="frame" x="0.0" y="497.5" width="369" height="116"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFT-De-6ZP">
+                                    <rect key="frame" x="0.0" y="20.5" width="117.5" height="75.5"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKd-A0-Q3O">
+                                    <rect key="frame" x="125.5" y="0.0" width="118" height="116"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKs-sv-4Pr" customClass="NumberButton" customModule="PinPad" customModuleProvider="target">
+                                            <rect key="frame" x="1" y="0.0" width="116" height="116"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="JKs-sv-4Pr" secondAttribute="height" id="vtB-xO-46b"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <state key="normal" title="0">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="numberValue">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberBtnAcion:" destination="-1" eventType="touchUpInside" id="17y-WO-8EF"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="JKs-sv-4Pr" firstAttribute="width" secondItem="vKd-A0-Q3O" secondAttribute="width" priority="750" id="KW6-th-gFT"/>
+                                        <constraint firstItem="JKs-sv-4Pr" firstAttribute="centerX" secondItem="vKd-A0-Q3O" secondAttribute="centerX" id="dAq-9w-3zL"/>
+                                        <constraint firstItem="JKs-sv-4Pr" firstAttribute="height" secondItem="vKd-A0-Q3O" secondAttribute="height" priority="750" id="lZc-FV-T9Q"/>
+                                        <constraint firstItem="JKs-sv-4Pr" firstAttribute="centerY" secondItem="vKd-A0-Q3O" secondAttribute="centerY" id="tXh-kt-qS6"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HpR-Sd-r2Z">
+                                    <rect key="frame" x="251.5" y="20.5" width="117.5" height="75.5"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-Bc-G65">
+                            <rect key="frame" x="0.0" y="621.5" width="369" height="116.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RA6-iN-iYa">
+                                    <rect key="frame" x="0.0" y="0.0" width="117.5" height="116.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="leftAccesoryAction:" destination="-1" eventType="touchUpInside" id="zAV-mw-vTW"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIj-rg-piX">
+                                    <rect key="frame" x="125.5" y="0.0" width="118" height="116.5"/>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkV-W0-6SP">
+                                    <rect key="frame" x="251.5" y="0.0" width="117.5" height="116.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <state key="normal" title="Clear">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="rightAccesoryAction:" destination="-1" eventType="touchUpInside" id="w8e-cY-nzP"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="oP6-oY-ICj" secondAttribute="height" multiplier="1:2" id="H31-yl-rjE"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="oP6-oY-ICj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" id="453-es-50i"/>
+                <constraint firstItem="oP6-oY-ICj" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="bottom" id="DCM-xX-A61"/>
+                <constraint firstItem="oP6-oY-ICj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="FjP-rO-Kcm"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oP6-oY-ICj" secondAttribute="trailing" id="RmD-1r-WQM"/>
+                <constraint firstItem="oP6-oY-ICj" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="aJh-pf-cJJ"/>
+                <constraint firstItem="oP6-oY-ICj" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" priority="750" id="aqb-88-0tW"/>
+                <constraint firstItem="oP6-oY-ICj" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" priority="750" id="id8-Lk-1Df"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-107.24637681159422" y="-83.035714285714278"/>
+        </view>
+    </objects>
+</document>
